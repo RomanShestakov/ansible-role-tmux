@@ -1,0 +1,21 @@
+# main.yml
+
+- name: Install tmux
+  homebrew:
+    name: tmux
+    state: present
+  when: ansible_distribution == "MacOSX"
+
+- name: Install tmux
+  become: yes
+  apt:
+    name: tmux
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install tmux
+  become: yes
+  pkgng:
+    name: tmux
+    state: present
+  when: ansible_distribution == "FreeBSD"

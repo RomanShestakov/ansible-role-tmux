@@ -1,0 +1,13 @@
+# meta/main.yml
+
+galaxy_info:
+  author: Roman Shestakov
+  description: Install tmux
+  min_ansible_version: 1.4
+  license: MIT
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - system
