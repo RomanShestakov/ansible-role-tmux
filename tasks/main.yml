@@ -25,4 +25,4 @@
   yum:
     name: tmux
     state: present
-    when: ansible_pkg_mgr == 'yum'
+  when: ansible_pkg_mgr == 'yum'
