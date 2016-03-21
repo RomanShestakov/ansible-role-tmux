@@ -19,3 +19,10 @@
     name: tmux
     state: present
   when: ansible_distribution == "FreeBSD"
+
+- name: Install tmux
+  # become: yes
+  yum:
+    name: tmux
+    state: present
+    when: ansible_pkg_mgr == 'yum'
